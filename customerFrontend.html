@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Web Store</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css">
+    <script src="formChecker.js"></script>
+</head>
+<body>
+    <h1>Rainy Day Bookstore</h1>
+    <form action="customerBackend.php" method="post" id="frontend">
+        <label for="username"><strong>Username:</strong></label>
+        <input type="email" name="username" id="username" required>
+        <br>
+        <label for="userpass"><strong>Password:</strong></label>
+        <input type="password" name="userpass" id="userpass" required>
+
+        <h3>Select the items that you would like to add to the cart:</h3>
+
+        <label for="gaiman">American Gods, by Neil Gaiman &nbsp;&nbsp; $21.99</label><br>
+        <img src="americangodscover.jpg" width=120px height=200px><br>
+        <p>Quantity: &nbsp;
+        <input type="number" name="gaiman" id="gaiman" min="0" value="0"></p>
+        <br><br>
+        <label for="murakami">Kafka on the Shore, by Haruki Murakami &nbsp;&nbsp; $11.99</label><br>
+        <img src="kafka.jpeg" width=120px height=200px><br>
+        <p>Quantity: &nbsp;
+        <input type="number" name="murakami" id="murakami" min="0" value="0"></p>
+        <br><br>
+        <label for="tolkein">Lord of the Rings Trilogy, by J.R.R. Tolkein &nbsp;&nbsp; $29.99</label><br>
+        <img src="lotr.jpeg" width=120ox height=200px><br>
+        <p>Quantity: &nbsp;
+        <input type="number" name="tolkein" id="tolkein" min="0" value="0"></p>
+        <br><br>
+
+        <h3>Select shipping option:</h3>
+
+        <input type="radio" name="shipping" id="free" value="free" checked="checked">
+        <label for="free">Free 7 Day</label><br>
+        <input type="radio" name="shipping" id="overnight" value="overnight">
+        <label for="overnight">$50.00 Over Night</label><br>
+        <input type="radio" name="shipping" id="three" value="three">
+        <label for="three">$5.00 Three Day</label>
+        <br><br>            
+        
+        <button type="reset">Reset Entries</button> &nbsp;
+        <button type="submit" onsubmit="formChecker()">Submit Order</button>
+    </form>
+</body>
+</html>
